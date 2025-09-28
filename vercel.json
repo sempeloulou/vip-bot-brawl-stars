@@ -1,23 +1,22 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/bot.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/bot.js": {
+      "maxDuration": 30
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/vip-role",
-      "dest": "/api/bot"
+      "source": "/vip-role",
+      "destination": "/api/bot"
     },
     {
-      "src": "/status",
-      "dest": "/api/bot"
+      "source": "/status",
+      "destination": "/api/bot"
     },
     {
-      "src": "/test",
-      "dest": "/api/bot"
+      "source": "/test",
+      "destination": "/api/bot"
     }
   ]
 }
