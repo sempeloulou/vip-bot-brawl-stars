@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/bot.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/vip-role",
+      "dest": "/api/bot"
+    },
+    {
+      "src": "/status",
+      "dest": "/api/bot/status"
+    },
+    {
+      "src": "/test",
+      "dest": "/api/bot/test"
+    }
+  ],
+  "env": {
+    "DISCORD_TOKEN": "@discord_token",
+    "WEBHOOK_SECRET": "@webhook_secret"
+  }
+}
