@@ -2,17 +2,16 @@
   "name": "vip-bot-brawl-stars",
   "version": "1.0.0",
   "description": "Bot Discord VIP automatique pour serveur Brawl Stars",
-  "main": "bot.js",
+  "main": "api/bot.js",
   "scripts": {
-    "start": "node bot.js",
-    "dev": "nodemon bot.js"
+    "start": "node api/bot.js",
+    "dev": "nodemon api/bot.js"
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
-    "discord.js": "^14.14.1",
-    "express": "^4.18.2"
+    "discord.js": "^14.14.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
